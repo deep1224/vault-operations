@@ -13,6 +13,8 @@ $npm install vault-operations
 
 ### How to use
 Include the module vault-access and instantiate a new object of va and pass all the required parameters.
+
+For AWS
 ```
 const va = require('vault-operations');
 
@@ -22,10 +24,30 @@ var vao = new va({
     "version": "<vault version - set 'v1' for default>",
     "path": "<path to your secrets in vault server - prefix with '/'>",
     "folder": "<folder path if any, where credentials are stored - prefix with '/'>",
-    "role": "<vault role>"
+    "role": "<vault role>",
+    "login_type": "aws"
 });
 ```
+For Ldap
 
+Add below parameters
+
+```
+"login_type": "ldap"
+"ldap_id": "The username of the LDAP user"
+"password": "The password for the LDAP user"
+
+```
+For App Role
+
+Add below parameters
+
+```
+"login_type": "approle"
+"role_id" (string: <required>) - RoleID of the AppRole.
+"secret_id" (string: <required>) - SecretID belonging to AppRole.
+
+```
 To read secrets from vault
 ```
 vao.read_vault_data().then(function (result) {

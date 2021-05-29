@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "aws-sdk": "^2.450.0",
+    "aws4": "^1.8.0",
+    "fs": "0.0.1-security",
+    "request": "^2.88.0",
+    "url": "^0.11.0",
+    "validator": "^10.11.0"
+  },
+  "deprecated": false,
+  "description": "Programatically access vault secrets. This works for LDAP, App Role login and AWS Lambda and EC2",
+  "keywords": [
+    "vault",
+    "aws-vault",
+    "aws vault",
+    "hashicorp",
+    "awsvault",
+    "aws4",
+    "sts",
+    "authentication",
+    "lambda",
+    "ec2",
+    "npm-vault",
+    "npm-vault-access",
+    "vault-access",
+    "npm-vault-operations",
+    "vault-operations"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "vault-operations",
+  "version": "1.0.0"
+}
